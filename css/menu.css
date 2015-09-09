@@ -1,0 +1,12 @@
+aside{
+    position: relative;
+    
+    margin-top: -2%;
+    margin-left: 5%;
+    width: 10%;
+}
+
+aside button{
+    background: #121212;
+    color: white;
+}
