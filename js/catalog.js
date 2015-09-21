@@ -1,12 +1,22 @@
-window.root = 'img/'
+window.root = ''
 window.imageArray = []
 
-function addImage(file) {
-    window.imageArray.push(file);
+
+function setRoot(path) {
+    window.root = path;
 }
 
 function setImageArray(files) {
     window.imageArray = files;
+}
+
+function setImageSize(w, h) {
+    window.image.setAttribute('weight', w);
+    window.image.setAttribute('height', h);
+}
+
+function addImage(file) {
+    window.imageArray.push(file);
 }
 
 function addImage(file) {
@@ -23,16 +33,13 @@ function setImage(i) {
 }
 
 function nextImage() {
-    console.log(window.image.getAttribute("index"));
-    //window.image.index++;
-    window.image.setAttribute("index", parseInt(window.image.getAttribute("index"))+1);
-    
-    console.log(window.image.getAttribute("index"));
-    //console.log(window.image.index);
+    var i = parseInt(window.image.getAttribute("index"))+1
+    if (i<imageArray.length) window.image.setAttribute("index", i);
     setImage(window.image.getAttribute("index"));
 }
 
 function backImage() {
-    window.image.index--;
+    var i = parseInt(window.image.getAttribute("index"))-1
+    if (i>=0) window.image.setAttribute("index", i);
     setImage(window.image.getAttribute("index"));
 }
