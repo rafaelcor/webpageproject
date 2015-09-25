@@ -1,0 +1,51 @@
+
+
+#ban {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#general {
+    margin: 20 auto;
+    width: 1000px;
+    background-color: red;
+}
+
+#content {
+    height: 100%;
+    background-color: slategrey;
+}
+
+#sidebar {
+    float: left;
+    height: 100%;
+    width: 230px;
+    background-color: black;
+}
+
+#sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    list-style: none;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    line-height: 55px;
+
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: grey;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: grey;
+}
