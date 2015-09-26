@@ -1,22 +1,19 @@
+$(document).ready(function(){
 
-function destroyImage() {
-    var image = document.getElementById('fullImage');
-    var darkback = document.getElementById('fullBack');
-    var next = document.getElementById('next');
-    var back = document.getElementById('back');
-    
-    image.parentNode.removeChild(image);
-    darkback.parentNode.removeChild(darkback);
-    next.parentNode.removeChild(next);
-    back.parentNode.removeChild(back);
-}
+    window.destroyImage = function() {
+        $("#fullImage").remove();
+        $("#fullBack").remove();
+        $("#next").remove();
+        $("#back").remove();
+    }
 
-function displayImage(i) {
-    window.image.setAttribute('src', 'img/'+window.imageArray[i]);
-    
-    document.body.appendChild(window.fullBack);
-    document.body.appendChild(window.fullImage);
-    document.body.appendChild(window.next);
-    document.body.appendChild(window.back);
-    
-}
+    window.displayImage = function(i) {
+        window.image.setAttribute('src', 'img/'+window.imageArray[i]);
+
+        $("body").append(window.fullBack);
+        $("body").append(window.fullImage)
+        $("body").append(window.next);
+        $("body").append(window.back);
+    }
+
+});
