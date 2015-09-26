@@ -25,11 +25,11 @@ function sub(obj, items) {
 
 $(document).ready(function(){
     $("li a").click(function(){
-        $("li a").each(function(index){
+       //$("li a").each(function(index){
             if ($(this).attr("subm")){
                 sub(this, $(this).attr("subm").split(","));
             }
-        });
+        //});
     });
     
     
