@@ -1,30 +1,13 @@
-$(document).ready(function(){    
-    var c = 0;
-    $("html").click(function(event){
-        if (c == 0){
-            c++;
-        }else{
-            c--;
-        }
-        console.log($("d1").hasClass("open"));
-        if ($(event.target).attr("id") == "dropdownMenu1" && c == 1){
-            console.log(event.target);
-            console.log("213");
-            $("#d2").css("margin-top", "65px");
-        }
-        else{
-            console.log(123123213);
-            $("#d2").css("margin-top", "0px");
-        }
-        if ($(event.target).attr("id") == "dropdownMenu2" && c == 1){
-            console.log(event.target);
-            console.log("213");
-            $("#d3").css("margin-top", "65px");
-        }
-        else{
-            console.log(123123213);
-            $("#d3").css("margin-top", "0px");
-        }
-        
-    });
-});
+function sub(obj, items) {
+    obj.innerHTML = "&#9660; " + obj.value;
+    lis = [];
+    list = document.createElement("ul");
+    
+    for (i=0; i<items.length; i++) {
+        element = document.createElement("li");
+        element.setAttribute("style", "background-color: cornflowerblue;");
+        element.innerHTML = items[i];
+        list.appendChild(element);
+    }
+    this.appendChild(list);
+}
