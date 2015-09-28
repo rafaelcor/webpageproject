@@ -45,11 +45,22 @@
 }
 
 #sidebar ul li a:hover {
-    text-decoration: none;
     color: white;
 }
 
 #sidebar ul li:hover {
     text-decoration: none;
     background-color: grey;
+}
+
+#sidebar ul .spl {
+    background-color: dodgerblue;
+}
+
+#sidebar ul .spl:hover {
+    background-color: deepskyblue;
+}
+
+#sidebar ul .spl a {
+    color: black;
 }
