@@ -1,16 +1,32 @@
-<table border="1">
+<!DOCTYPE html>
+<table id="myTable" class="tablesorter" border="1">
     <!--En html5 podemos obviar thead y tbody-->
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th class="header">Descripción</th>
+            <th class="header">Precio</th>
+        </tr>
+    </thead>
     
-    <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-    </tr>
+    <tbody>
+        <tr>
+            <td><img src="../img/amdfx8350.jpg" width="100" height="100"></td>
+            <td>AMD FX-8350</td>
+            <td>180USD</td>
+        </tr>
+        <tr>
+            <td><img src="../img/amdfx6300.jpg" width="100" height="100"></td>
+            <td>AMD FX-6300</td>
+            <td>90USD</td>
+        </tr>
+    </tbody>
     
     
 </table>
+<script type="application/javascript">
+    $(document).ready(function() { 
+        $("#myTable").tablesorter({sortList: [[0,0], [1,0]]}); 
+    }); 
+
+</script>
