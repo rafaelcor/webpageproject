@@ -12,8 +12,10 @@ $(document).ready(function() {
     }
 
     $("a").click(function () {
+        console.log($(this).attr("sub"));
         
         if ($(this).attr("sub") == "0") {
+            console.log("open");
             cs = $(this).attr("class").split(" ");
             showThing(".s"+cs[0][2]);
             
@@ -23,9 +25,12 @@ $(document).ready(function() {
             $(this).html("&#9660; " + val[1]);
         }
         else if ($(this).attr("sub") == "1") {
+            console.log("close");
             cs = $(this).attr("class").split(" ");
             hideThing(".s"+cs[0][2]);
-            
+            val = $(this).html().split(" ", 2);
+            console.log(val[1]);
+            $(this).html("&#9658; " + val[1]);
             $(this).attr("sub", "0");
         }
     });
