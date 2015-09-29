@@ -14,14 +14,10 @@ $(document).ready(function() {
     $("a").click(function () {
         console.log($(this).attr("sub"));
         
-        if (! $(this).hasClass("sp1") || 
-            ! $(this).hasClass("sp2") ||
-            ! $(this).hasClass("sp3") ||
-            ! $(this).hasClass("sp4"))
-            {
+        if (! $(this).attr("class").match(/sp./)){
                 console.log($(this).html());
                 loadContent($(this).html().replace(" ", "") + ".html");
-            }
+        }
         
         if ($(this).attr("sub") == "0") {
             console.log("open");
