@@ -3,20 +3,20 @@
     <!--En html5 podemos obviar thead y tbody-->
     <thead>
         <tr>
-            <th>&nbsp;</th>
-            <th class="header">Descripción</th>
-            <th class="header">Precio</th>
+            <th id="noth"></th>
+            <th class="header">Descripción▼</th>
+            <th id="headerPrecio" class="header headerSortDown">Precio▼</th>
         </tr>
     </thead>
     
     <tbody>
-        <tr>
-            <td><img src="../img/amdfx8350.jpg" width="100" height="100"></td>
+        <tr procImages="amdfx8350">
+            <td><a href="javascript:window.displayImage('0')"><img src="../img/amdfx8350.jpg" width="100" height="100"></td></a>
             <td>AMD FX-8350</td>
-            <td>180USD</td>
+            <td>180USD</tdz
         </tr>
-        <tr>
-            <td><img src="../img/amdfx6300.jpg" width="100" height="100"></td>
+        <tr procImages="amdfx6300">
+            <td><a href="javascript:window.displayImage('0')"><img src="../img/amdfx6300.jpg" width="100" height="100"></td></a>
             <td>AMD FX-6300</td>
             <td>90USD</td>
         </tr>
@@ -24,9 +24,4 @@
     
     
 </table>
-<script type="application/javascript">
-    $(document).ready(function() { 
-        $("#myTable").tablesorter({sortList: [[0,0], [1,0]]}); 
-    }); 
-
-</script>
+<script type="application/javascript" src="../js/procesadores.js"></script>

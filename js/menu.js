@@ -15,8 +15,8 @@ $(document).ready(function() {
         console.log($(this).attr("sub"));
         
         if (! $(this).attr("class").match(/sp./)){
-                console.log($(this).html());
-                loadContent($(this).html().replace(" ", "") + ".html");
+            console.log($(this).html());
+            loadContent($(this).html().replace(" ", "") + ".html");
         }
         
         if ($(this).attr("sub") == "0") {
