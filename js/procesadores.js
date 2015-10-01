@@ -33,23 +33,40 @@ $(document).ready(function() {
     
     
     $("td a").click(function(){
+        //console.log($(this).parent().parent().attr("procimages"));
         var imageArray = [];
-        //console.log(this.getParent());
-        var filter = $(this).parent().parent().attr("procimages");
-        console.log(filter);
-        $.ajax({
+        
+        /*$.ajax({
           url: "../img",
           success: function(data){
-              setRoot('../img/');
+              var filter = $(this).parent().parent().attr("procimages");
+              console.log(filter);
               $(data).find("a:contains(" + filter  + ")").each(function(){
-                // will loop through 
                  var image = $(this).attr("href");
                  imageArray.push(image);
                 
              });
+              setRoot('../img/');
               setImageArray(imageArray);
-          }
-        });
+          },
+         
+        });*/
+        var elem = $(this);
+        $.ajax("../img")
+        .done(function(data){
+            console.log(elem.parent());
+            var filter = elem.parent().parent().attr("procimages");
+              console.log(filter);
+              $(data).find("a:contains(" + filter  + ")").each(function(){
+                 var image = $(this).attr("href");
+                 imageArray.push(image);
+                
+              });
+              setRoot('../img/');
+              setImageArray(imageArray);
+            nextImage();
+        })
+        .fail(function(){})
         
     });
     

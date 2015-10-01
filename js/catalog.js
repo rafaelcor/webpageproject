@@ -11,7 +11,7 @@ function setImageArray(files) {
 }
 
 function setImageSize(w, h) {
-    window.image.setAttribute('weight', w);
+    window.image.setAttribute('width', w);
     window.image.setAttribute('height', h);
 }
 

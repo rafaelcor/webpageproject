@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //console.log("ready");
+   
     window.destroyImage = function() {
         $("#fullImage").remove();
         $("#fullBack").remove();

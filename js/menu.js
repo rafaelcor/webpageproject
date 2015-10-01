@@ -11,7 +11,7 @@ $(document).ready(function() {
         $(id).each(function () {$(this).show()});
     }
 
-    $("a").click(function () {
+    $("li a").click(function () {
         console.log($(this).attr("sub"));
         
         if (! $(this).attr("class").match(/sp./)){
