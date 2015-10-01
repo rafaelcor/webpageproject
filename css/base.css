@@ -74,3 +74,60 @@
 .header:not(#noth):hover{
     background-color:aqua;
 }
+
+/*table{
+    font-family: Verdana,Geneva,sans-serif; 
+}*/
+
+body{
+    font-family: Verdana,Geneva,sans-serif; 
+}
+
+#content{
+    font-family: Arial;
+}
+
+li a{
+    outline: 0;/*El marco feo de cada link al hacer foco*/
+}
+
+table td{
+    width: 33.333333333333336%;
+}
+
+table tbody td{
+    background-color:cadetblue;
+    text-align: center;
+    vertical-align: middle;
+    line-height: inherit;
+    
+}
+
+/*@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #ban {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 20%;
+    }
+    #general {
+        display: block;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+        background-color: red;
+    }
+    #sidebar {
+        float: left;
+        height: 100%;
+        width: 12%;
+        font-size: 16%;
+        background-color: black;
+    }
+}*/
