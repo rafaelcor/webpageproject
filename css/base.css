@@ -103,6 +103,10 @@ table tbody td{
     
 }
 
+table {
+    width: 770px;
+}
+
 /*@media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
