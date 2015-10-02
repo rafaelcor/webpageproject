@@ -64,7 +64,7 @@ $(document).ready(function() {
               });
               setRoot('../img/');
               setImageArray(imageArray);
-              nextImage();
+              setImage(0);
         })
         .fail(function(){})
         
