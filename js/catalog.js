@@ -43,3 +43,11 @@ function backImage() {
     if (i>=0) window.image.setAttribute("index", i);
     setImage(window.image.getAttribute("index"));
 }
+
+$(document).ready(function(){
+    $("body").keypress(function(e){
+        if(e.keyCode == 27){ // 27 -> ESC
+            destroyImage();
+        }
+    })
+});

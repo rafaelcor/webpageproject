@@ -1,13 +1,62 @@
 
 $(document).ready(function() {
-        
-    $("#myTable").tablesorter({sortList: [[0,0], [1,0]]}); 
+    console.log("preajax");
+    $("#myTable").tablesorter({sortList: [[0,0], [1,0]]});
     console.log("proc");
+    
     //headerSortDown
     $("#noth").click(function(event){
         event.preventDefault();
         console.log("nnoth");
     });
+    console.log("preajax");
+    var imgFiles = [];
+    console.log("preajax");
+    $.ajax("../img")
+        .done(function(data){
+            console.log("ajax no error");
+            $(data).find("a").each(function(){
+                var image = $(this).attr("href");
+                    imgFiles.push(image);
+            });
+            console.log("ajax no error");
+            
+
+            $("table tr").each(function(ind, obj){
+                if($(obj).attr("procimages") != undefined){
+                    console.log("if table tr");
+                    var imgFiltered = [];
+                    for(e=0;e<imgFiles.length;e++){
+                        console.log(e);
+                        if(imgFiles[e].match($(this).attr("procimages"))){
+                            imgFiltered.push(imgFiles[e]);
+                        };
+                    }
+                    console.log("L31");
+                    console.log(imgFiltered);
+                    strjs = "javascript:window.displayImage(0)";
+
+                    $(this).prepend("<td><a href='" + strjs + "'>" + "<img src='../img/" + imgFiltered[0] + "' width='100' heigth='100'></a></td>");
+                }
+            });
+        
+            $("td a").click(function(){
+                var imageArray = [];
+                var filter = $(this).parent().parent().attr("procimages");
+                for(e=0;e<imgFiles.length;e++){
+                    console.log(e);
+                    if(imgFiles[e].match(filter)){
+                        imageArray.push(imgFiles[e]);
+                    };
+                }
+                setRoot('../img/');
+                setImageArray(imageArray);
+                setImage(0);
+            });
+        })
+            .fail(function(){});
+
+    
     
     $("table th").click(function(){
         if ($(this).attr("id") != "noth"){
@@ -26,49 +75,7 @@ $(document).ready(function() {
         
     });
     
-    /*$("table img").click(function(){
-        console.log("img click");
-    })*/
-    
-    
-    
-    $("td a").click(function(){
-        //console.log($(this).parent().parent().attr("procimages"));
-        var imageArray = [];
-        
-        /*$.ajax({
-          url: "../img",
-          success: function(data){
-              var filter = $(this).parent().parent().attr("procimages");
-              console.log(filter);
-              $(data).find("a:contains(" + filter  + ")").each(function(){
-                 var image = $(this).attr("href");
-                 imageArray.push(image);
-                
-             });
-              setRoot('../img/');
-              setImageArray(imageArray);
-          },
-         
-        });*/
-        var elem = $(this);
-        $.ajax("../img")
-        .done(function(data){
-            console.log(elem.parent());
-            var filter = elem.parent().parent().attr("procimages");
-              console.log(filter);
-              $(data).find("a:contains(" + filter  + ")").each(function(){
-                 var image = $(this).attr("href");
-                 imageArray.push(image);
-                
-              });
-              setRoot('../img/');
-              setImageArray(imageArray);
-              setImage(0);
-        })
-        .fail(function(){})
-        
-    });
+
     
     
     
