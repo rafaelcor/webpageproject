@@ -6,7 +6,7 @@
 
 #general {
     display: block;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
@@ -15,7 +15,7 @@
 
 #content {
     height: 100vh;
-    background-color: white;
+    background-color: darkgrey;
 }
 
 #sidebar {
@@ -28,6 +28,7 @@
 #sidebar ul {
     padding: 0;
     margin: 0;
+    margin-top: 20px;
 }
 
 #sidebar ul li {
@@ -40,9 +41,15 @@
 
 #sidebar ul li a {
     text-decoration: none;
+    font-size: 14px;
     margin-left: 20px;
     color: grey;
     display: block;
+}
+
+#sidebar .firstItem a {
+    font-weight: bold;
+    font-size: 16px;
 }
 
 #sidebar ul li a:hover {
