@@ -106,8 +106,11 @@ table tbody td{
     background-color: lightgrey;
     text-align: center;
     vertical-align: middle;
-    line-height: inherit;
-    
+    line-height: inherit;    
+}
+
+table thead tr{
+    border-bottom: 1px solid black;
 }
 
 table {
