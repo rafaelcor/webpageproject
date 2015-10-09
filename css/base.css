@@ -15,7 +15,7 @@
 
 #content {
     height: 100vh;
-    background-color: darkgrey;
+    background-color: lightgrey;
 }
 
 #sidebar {
@@ -103,7 +103,7 @@ table td{
 }
 
 table tbody td{
-    background-color: white;
+    background-color: lightgrey;
     text-align: center;
     vertical-align: middle;
     line-height: inherit;
