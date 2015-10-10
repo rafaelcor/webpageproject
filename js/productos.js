@@ -67,6 +67,7 @@ $(document).ready(function() {
     });
             $("table tr").each(function(ind, obj){
                 if($(obj).attr("procimages") != undefined){
+                    imgs = files;
                     //console.log("if table tr");
                     var imgFiltered = [];
                     for(e=0;e<imgs.length;e++){
@@ -77,7 +78,7 @@ $(document).ready(function() {
                     }
                     
                     strjs = "javascript:window.displayImage(0)";
-
+                    console.log(imgFiltered[0]);
                     $(this).prepend("<td><a href='" + strjs + "'>" + "<img src='../img/" + imgFiltered[0] + "' width='100' heigth='100'></a></td>");
                 }
             });
