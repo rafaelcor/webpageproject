@@ -1,7 +1,7 @@
 import SimpleHTTPServer
 import SocketServer
 
-PORT = 8081
+PORT = 81
 
 Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
 
