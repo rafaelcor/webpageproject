@@ -20,24 +20,33 @@ $(document).ready(function() {
         }
         
         if ($(this).attr("sub") == "0") {
-            console.log("open");
-            cs = $(this).attr("class").split(" ");
-            showThing(".s"+cs[0][2]);
-            
+            $("[class*=sp]").attr("sub", "0");
             $(this).attr("sub", "1");
-            val = $(this).html().split(" ", 2);
-            console.log(val[1]);
-            $(this).html("&#9660; " + val[1]);
+            
         }
         else if ($(this).attr("sub") == "1") {
-            console.log("close");
-            cs = $(this).attr("class").split(" ");
-            hideThing(".s"+cs[0][2]);
-            val = $(this).html().split(" ", 2);
-            console.log(val[1]);
-            $(this).html("&#9658; " + val[1]);
             $(this).attr("sub", "0");
         }
+        
+        $("li a").each(function(){
+            if($(this).attr("sub") == "0"){
+                console.log(0);
+                cs = $(this).attr("class").split(" ");
+                hideThing(".s"+cs[0][2]);
+                val = $(this).html().split(" ", 2);
+                $(this).html("&#9658; " + val[1]);
+            }
+            else if($(this).attr("sub") == "1"){
+                
+                console.log(1);
+                cs = $(this).attr("class").split(" ");
+                showThing(".s"+cs[0][2]);
+                val = $(this).html().split(" ", 2);
+                $(this).html("&#9660; " + val[1]);
+            }
+        });
+        
+        
     });
     
     
