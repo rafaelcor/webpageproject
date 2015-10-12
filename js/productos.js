@@ -1,4 +1,4 @@
-
+window.images = [];
 $(document).ready(function() {
     
     var imgs = [];
@@ -33,29 +33,29 @@ $(document).ready(function() {
         $.ajax("../img")
             .done(function(data){
             var files = [];
-                $(data).find("a").each(function(){files.push($(this).attr("href"))});
+                $(data).find("a").each(function(){files.push("../"+$(this).attr("href"))});
                 console.log(files);
                 imgs.concat(files);
                 
             $.ajax("../img/perifericos/controles")
                 .done(function(data){
-                    $(data).find("a").each(function(){files.push("perifericos/controles/" + $(this).attr("href"))});
+                    $(data).find("a").each(function(){files.push("../"+"perifericos/controles/" + $(this).attr("href"))});
                     console.log(files);
                     imgs.concat(files);
                     $.ajax("../img/perifericos/mouses")
                         .done(function(data){
-                            $(data).find("a").each(function(){files.push("perifericos/mouses/" + $(this).attr("href"))});
+                            $(data).find("a").each(function(){files.push("../" + $(this).attr("href"))});
                             console.log(files);
                             imgs.concat(files);
                             
                             $.ajax("../img/perifericos/parlantes")
                                 .done(function(data){
-                                    $(data).find("a").each(function(){files.push("perifericos/parlantes/"+$(this).attr("href"))});
+                                    $(data).find("a").each(function(){files.push("../"+$(this).attr("href"))});
                                     console.log(files);
                                     imgs.concat(files);
                                     $.ajax("../img/perifericos/teclados")
                                         .done(function(data){
-                                            $(data).find("a").each(function(){files.push("perifericos/teclados/"+$(this).attr("href"))});
+                                            $(data).find("a").each(function(){files.push("../"+$(this).attr("href"))});
                                             console.log(files);
                                             imgs.concat(files);
                                             console.log("ttt");
@@ -68,6 +68,7 @@ $(document).ready(function() {
             $("table tr").each(function(ind, obj){
                 if($(obj).attr("procimages") != undefined){
                     imgs = files;
+                    window.images = imgs;
                     //console.log("if table tr");
                     var imgFiltered = [];
                     for(e=0;e<imgs.length;e++){
@@ -82,7 +83,7 @@ $(document).ready(function() {
                     $(this).prepend("<td><a href='" + strjs + "'>" + "<img src='../img/" + imgFiltered[0] + "' width='100' heigth='100'></a></td>");
                 }
             });
-        
+            
             $("td a").click(function(){
                 var imageArray = [];
                 var filter = $(this).parent().parent().attr("procimages");
@@ -92,6 +93,10 @@ $(document).ready(function() {
                         imageArray.push(imgs[e]);
                     };
                 }
+                /*console.log("<<<<<<<<<<<<<");
+                console.log(window.image.getAttribute('width'));
+                console.log(window.image.getAttribute('heigth'));
+                console.log(">>>>>>>>>>>>>");*/
                 setRoot('../img/');
                 setImageArray(imageArray);
                 setImage(0);

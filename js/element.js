@@ -9,6 +9,10 @@ window.fullBack.setAttribute('id', 'fullBack');
 window.fullBack.setAttribute('onclick', 'destroyImage();');
 
 window.fullImage.setAttribute('id', 'fullImage');
+
+//window.fullImage.setAttribute('width', 400);
+//window.fullImage.setAttribute('height', 300);
+
 window.fullImage.setAttribute('width', 400);
 window.fullImage.setAttribute('height', 300);
 

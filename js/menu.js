@@ -14,10 +14,10 @@ $(document).ready(function() {
     $("li a").click(function () {
         console.log($(this).attr("sub"));
         
-        if (! $(this).attr("class").match(/sp./)){
+        //if (! $(this).attr("class").match(/sp./)){
             console.log($(this).html());
             loadContent($(this).html().replace(" ", "") + ".html");
-        }
+        //}
         
         if ($(this).attr("sub") == "0") {
             $("[class*=sp]").attr("sub", "0");
