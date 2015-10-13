@@ -27,11 +27,11 @@ $(document).ready(function() {
     
     $.ajax(IMG_FOLDER)
         .done(function(data){
-            console.log("1stajax");
+            //console.log("1stajax");
             var files = [];
             var ajaxArray = [];
             $(data).find("a").each(function(){files.push("../"+$(this).attr("href"))});
-            console.log(files);
+            //console.log(files);
             imgs.concat(files);
                 
             for(e=0;e<ajaxPath.length;e++){
@@ -46,7 +46,7 @@ $(document).ready(function() {
                             );
                             
                             imgs.concat(files);
-                            console.log(files);
+                            //console.log(files);
                         }
                         
                     })
@@ -55,7 +55,7 @@ $(document).ready(function() {
             }
             window.images = files;
             $.when.apply($, ajaxArray).done(function(){
-                console.log(files);
+                //console.log(files);
                 $("table tbody tr").each(function(ind, obj){
                     var proc = $(this).attr("procimages");
                     var bk = $(this).children().first();
@@ -73,7 +73,7 @@ $(document).ready(function() {
                         }
 
                         strjs = "javascript:window.displayImage(0)";
-                        console.log(imgFiltered[0]);
+                        //console.log(imgFiltered[0]);
                         $(this).prepend("<td><a href='" + strjs + "'>" + "<img src='../img/" + imgFiltered[0] + "' width='100' heigth='100'></a></td>");
                     }
                 });

@@ -12,10 +12,8 @@ $(document).ready(function() {
     }
 
     $("li a").click(function () {
-        console.log($(this).attr("sub"));
         
         //if (! $(this).attr("class").match(/sp./)){
-            console.log($(this).html());
             loadContent($(this).html().replace(" ", "") + ".html");
         //}
         
@@ -30,15 +28,12 @@ $(document).ready(function() {
         
         $("li a").each(function(){
             if($(this).attr("sub") == "0"){
-                console.log(0);
                 cs = $(this).attr("class").split(" ");
                 hideThing(".s"+cs[0][2]);
                 val = $(this).html().split(" ", 2);
                 $(this).html("&#9658; " + val[1]);
             }
             else if($(this).attr("sub") == "1"){
-                
-                console.log(1);
                 cs = $(this).attr("class").split(" ");
                 showThing(".s"+cs[0][2]);
                 val = $(this).html().split(" ", 2);
