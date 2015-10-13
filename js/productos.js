@@ -3,8 +3,8 @@ $(document).ready(function() {
     
     var imgs = [];
 
-    $("#myTable").tablesorter({sortList: [[0,0], [1,0]]});
-
+    $("#myTable").tablesorter({sortList: [[0, 0], [1, 0]]});
+    
     $("#noth").click(function(event){
         event.preventDefault();
     });
@@ -15,8 +15,14 @@ $(document).ready(function() {
                 "perifericos/parlantes",
                 "perifericos/teclados",
                 "procesadores/intel",
+                "procesadores/amd",
                 "refrigeracion/aire",
-                "refrigeracion/liquida"
+                "refrigeracion/liquida",
+                "laptops",
+                "pcs",
+                "motherboards",
+                "tarjetas/video/ati",
+                "tarjetas/video/nvidia"
                 ];
     
     $.ajax(IMG_FOLDER)
@@ -48,7 +54,7 @@ $(document).ready(function() {
                     
             }
             window.images = files;
-            $.when.apply($,ajaxArray).done(function(){
+            $.when.apply($, ajaxArray).done(function(){
                 console.log(files);
                 $("table tbody tr").each(function(ind, obj){
                     var proc = $(this).attr("procimages");
