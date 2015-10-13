@@ -14,7 +14,9 @@ $(document).ready(function() {
                 "perifericos/mouses",
                 "perifericos/parlantes",
                 "perifericos/teclados",
-                "procesadores/intel"
+                "procesadores/intel",
+                "refrigeracion/aire",
+                "refrigeracion/liquida"
                 ];
     
     $.ajax(IMG_FOLDER)
