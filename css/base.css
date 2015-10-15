@@ -112,10 +112,14 @@ table {
     width: 770px;
 }
 
-.detalle_img{
+.detalle_img div{
+    display: block;
     float:left;
     margin-left: 20px;
     margin-top: 20px;
 }
 
 
+.desc {
+    clear: both;
+}
