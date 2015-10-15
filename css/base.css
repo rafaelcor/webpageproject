@@ -88,6 +88,8 @@ body{
     font-family: Verdana,Geneva,sans-serif;
 }
 
+
+
 #content{
     font-family: Arial;
 }
@@ -122,8 +124,16 @@ div dimg {
 }
 
 div p {
+<<<<<<< HEAD
     position: relative;    
     left: 20px;
     margin-right: 40px;
     top: 20px;
 }
+=======
+    position: relative;
+    left: 20px;
+    margin-right: 40px;
+    top: 20px;
+}
+>>>>>>> 4953325cf62090b15efc3cb1e892dac319973538
