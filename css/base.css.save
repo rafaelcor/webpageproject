@@ -9,20 +9,17 @@
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
-    height: 1000px;
     background-color: red;
 }
 
 #content {
-    /*height: 100vh;*/
-    height: 1000px;
+    height: 100vh;
     background-color: lightgrey;
 }
 
 #sidebar {
     float: left;
-    /*height: 100vh;*/
-    height: 1000px;
+    height: 100vh;
     width: 230px;
     background-color: black;
 }
@@ -115,15 +112,16 @@ table {
     width: 770px;
 }
 
-div dimg {
-    position: relative;
+.detalle_img div{
+    display: realtive;
+    float:left;
     margin-left: 20px;
-    top: 20px;
+    margin-top: 20px;
 }
 
-div p {
-    position: relative;    
-    left: 20px;
-    margin-right: 40px;
-    top: 20px;
+
+.desc {
+    bottom: 0;
+    position: absolute;
+clear
 }
