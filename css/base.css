@@ -125,6 +125,10 @@ div dimg a img{
 	margin-top: 20px;
 }
 
+div img{
+	margin: 20px;
+}
+
 div p {
 	margin-left: 250px;
 	margin-right: 20px;
