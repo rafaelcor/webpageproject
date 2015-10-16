@@ -28,13 +28,14 @@ function getImage() {
 }
 
 function setImage(i) {
-    window.image.setAttribute('src', root + imageArray[i]);
+    window.image.setAttribute('src', imageArray[i]);
     window.image.setAttribute("index", parseInt(i));
 }
 
 function nextImage() {
-    var i = parseInt(window.image.getAttribute("index"))+1
-    if (i<imageArray.length) window.image.setAttribute("index", i);
+    var i = parseInt(window.image.getAttribute("index"))+1;
+    console.log(i);
+    if (i<imageArray.length && imageArray[i] != undefined) window.image.setAttribute("index", i);
     setImage(window.image.getAttribute("index"));
 }
 
