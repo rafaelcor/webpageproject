@@ -118,22 +118,14 @@ table {
 }
 
 div dimg {
-    position: relative;
-    margin-left: 20px;
-    top: 20px;
+	margin: 20px;
+}
+
+div dimg a img{
+	margin-top: 20px;
 }
 
 div p {
-<<<<<<< HEAD
-    position: relative;    
-    left: 20px;
-    margin-right: 40px;
-    top: 20px;
+	margin-left: 250px;
+	margin-right: 20px;
 }
-=======
-    position: relative;
-    left: 20px;
-    margin-right: 40px;
-    top: 20px;
-}
->>>>>>> 4953325cf62090b15efc3cb1e892dac319973538
