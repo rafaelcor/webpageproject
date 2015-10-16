@@ -13,7 +13,14 @@ $(document).bind('keydown keyup', function(e) {
     }
 });
 
-$(document).ready(function(){
-    loadContent("index.html");
 
+
+$(document).ready(function(){
+    /*if($("#fullBack").length){
+        console.log("fulllength");
+        $("body").css("overflow", "hidden");
+    }*/
+    loadContent("index.html");
+    
+    
 });
