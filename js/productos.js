@@ -2,29 +2,6 @@ window.images = [];
 $(document).ready(function() {
     
     var imgs = [];
-    
-    $.tablesorter.addParser({ 
-        // set a unique id 
-        id: 'thousands',
-        is: function(s) { 
-            // return false so this parser is not auto detected 
-            return false; 
-        }, 
-        format: function(s) {
-            // format your data for normalization 
-            return s.replace('U$S','').replace(/,/g,'');
-        }, 
-        // set type, either numeric or text 
-        type: 'numeric'
-    }); 
-    
-    $("#myTable").tablesorter({
-
-        sortList: [[0, 0], [1, 0]]});
-    
-    $("#noth").click(function(event){
-        event.preventDefault();
-    });
 
     IMG_FOLDER = "../img";
     ajaxPath = ["perifericos/controles", 
@@ -93,7 +70,9 @@ $(document).ready(function() {
                         console.log(imgFiltered[0]);
                         $(this).prepend("<td><a href='" + strjs + "'>" + "<img src='" + imgFiltered[0] + "' width='100' heigth='100'></a></td>");
                     }
+                    
                 });
+                $("#myTable").tablesorter();
 
                 $("td a").click(function(){
                     console.log("TD A!!");
