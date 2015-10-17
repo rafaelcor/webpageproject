@@ -73,6 +73,7 @@ $(document).ready(function() {
                     
                 });
                 $("#myTable").tablesorter();
+                $("#myTable #noth").removeClass("header");
 
                 $("td a").click(function(){
                     console.log("TD A!!");
